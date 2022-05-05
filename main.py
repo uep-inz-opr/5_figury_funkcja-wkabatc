@@ -13,7 +13,6 @@ def calc_area(fig):
         return 'N/D'
 
 i = int(input())
-#figures = []
 sum = 0
 
 for n in range(i):
@@ -23,11 +22,8 @@ for n in range(i):
         sum = 'N/D'
         break
     sum = sum + calc_area(f)
-    #print(calc_area(f))
-    #figures.append(f)
 
 if sum != 'N/D':
     print(format(sum, ".2f"))
 else:
     print('Błąd: można podać maksymalnie 3 liczby')
-#print(figures)
