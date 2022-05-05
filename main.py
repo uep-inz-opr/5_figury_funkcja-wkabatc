@@ -11,6 +11,7 @@ def calc_area(fig):
         return (s * (s - fig[0]) * (s - fig[1]) * (s - fig[2])) ** 0.5
     if l >= 4:
         ret = 'Błąd: można podać maksymalnie 3 liczby'
+        return 0
 
 i = int(input())
 #figures = []
