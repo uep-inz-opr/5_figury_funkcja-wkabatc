@@ -10,8 +10,7 @@ def calc_area(fig):
         s = (fig[0] + fig[1] + fig[2]) / 2
         return (s * (s - fig[0]) * (s - fig[1]) * (s - fig[2])) ** 0.5
     if l >= 4:
-        ret = 'Błąd: można podać maksymalnie 3 liczby'
-        return 0
+        return 'N/D'
 
 i = int(input())
 #figures = []
@@ -19,9 +18,16 @@ sum = 0
 
 for n in range(i):
     f = list(map(float, input().split()))
+    area = calc_area(f)
+    if area == 'N/D':
+        sum = 'N/D'
+        break
     sum = sum + calc_area(f)
     #print(calc_area(f))
     #figures.append(f)
 
-print(format(sum, ".2f"))
+if sum != 'N/D':
+    print(format(sum, ".2f"))
+else:
+    print('Błąd: można podać maksymalnie 3 liczby')
 #print(figures)
