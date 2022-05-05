@@ -17,7 +17,7 @@ i = int(input())
 sum = 0
 
 for n in range(i):
-    f = list(map(int, input().split()))
+    f = list(map(float, input().split()))
     sum = sum + calc_area(f)
     #print(calc_area(f))
     #figures.append(f)
